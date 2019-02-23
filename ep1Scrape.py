@@ -18,11 +18,9 @@ def get_playlist_info(link):
     for li in html.select('li'):
         try:
             if "_rec_playlist" in li.get('class'):
-                print("found something")
                 ids.append("https://tv.naver.com/v/" + li['data-clipno'])
         except:
             pass
-    print(ids)
     return ids
 
 if __name__ == "__main__":
